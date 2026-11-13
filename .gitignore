@@ -1,0 +1,20 @@
+# Środowisko wirtualne
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+
+# Dane lokalne / poufne
+.env
+
+# Baza danych (pojawi się od lab 09)
+db.sqlite3

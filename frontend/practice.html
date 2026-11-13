@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Planer nauki</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!--
+        Lab 03 zad. 6, lab 04 zad. 4, lab 05 zad. 4, lab 06 zad. 4
+        Ćwiczeniowa strona dla przykładowego tematu: Planer nauki.
+    -->
+
+    <header>
+        <h1>Planer nauki</h1>
+
+        <nav>
+            <a href="#subjects">Przedmioty</a>
+            <a href="#tasks">Zadania</a>
+            <a href="#add-task">Dodaj zadanie</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="subjects">
+            <h2>Przedmioty</h2>
+
+            <div class="task-list">
+                <article class="task-card">
+                    <h3>Programowanie</h3>
+
+                    <p>
+                        Ćwiczenia z podstaw programowania
+                        oraz aplikacji webowych.
+                    </p>
+                </article>
+
+                <article class="task-card">
+                    <h3>Statystyka</h3>
+
+                    <p>
+                        Powtórzenie materiału przed kolokwium.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="tasks">
+            <h2>Najbliższe zadania</h2>
+
+            <div class="task-list">
+                <article class="task-card">
+                    <h3>Formularze HTML</h3>
+
+                    <p>
+                        Termin: 15 października
+                    </p>
+                </article>
+
+                <article class="task-card">
+                    <h3>Powtórka ze statystyki</h3>
+
+                    <p>
+                        Termin: 18 października
+                    </p>
+                </article>
+
+                <article class="task-card">
+                    <h3>Przygotowanie prezentacji</h3>
+
+                    <p>
+                        Termin: 20 października
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="add-task">
+            <h2>Dodaj zadanie</h2>
+
+            <form method="post">
+
+                <div>
+                    <label for="task-name">
+                        Nazwa zadania:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="task-name"
+                        name="task_name"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="subject">
+                        Przedmiot:
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        required
+                    >
+                        <option value="">
+                            Wybierz przedmiot
+                        </option>
+
+                        <option value="programming">
+                            Programowanie
+                        </option>
+
+                        <option value="statistics">
+                            Statystyka
+                        </option>
+
+                        <option value="psychology">
+                            Psychologia
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="deadline">
+                        Termin:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deadline"
+                        name="deadline"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="priority">
+                        Priorytet:
+                    </label>
+
+                    <select
+                        id="priority"
+                        name="priority"
+                    >
+                        <option value="low">
+                            Niski
+                        </option>
+
+                        <option value="medium">
+                            Średni
+                        </option>
+
+                        <option value="high">
+                            Wysoki
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="description">
+                        Opis:
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <button type="submit">
+                    Dodaj zadanie
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Przykładowy projekt ćwiczeniowy
+        </p>
+    </footer>
+
+</body>
+</html>

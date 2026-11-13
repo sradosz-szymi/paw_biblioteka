@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteka</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Biblioteka</h1>
+
+        <nav>
+            <a href="#about">O bibliotece</a>
+            <a href="#books">Książki</a>
+            <a href="#authors">Autorzy</a>
+            <a href="#rules">Jak wypożyczyć?</a>
+            <a href="#opening-hours">Godziny otwarcia</a>
+            <a href="#contact">Kontakt</a>
+            <a href="add_book.html">Dodaj książkę</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>O bibliotece</h2>
+
+            <p>
+                Witaj w przykładowej Bibliotece.
+                W kolejnych laboratoriach ta prosta strona zostanie
+                rozbudowana do aplikacji działającej w Django.
+            </p>
+
+            <p>
+                Docelowo użytkownik będzie mógł przeglądać książki,
+                wyświetlać ich szczegóły oraz wykonywać podstawowe
+                operacje związane z wypożyczeniami.
+            </p>
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Book_icon_1.svg/512px-Book_icon_1.svg.png"
+                alt="Ikona książki"
+                width="120"
+            >
+
+            <!-- Lab 03, zadanie 5 — obraz lokalny -->
+            <img
+                class="library-image"
+                src="images/library.jpg"
+                alt="Wnętrze biblioteki"
+            >
+        </section>
+
+        <!-- Lab 04 — formularz GET (+ zadanie 2: rok wydania od) -->
+        <section id="search">
+            <h2>Wyszukaj książkę</h2>
+
+            <form
+                class="search-form"
+                method="get"
+            >
+
+                <div>
+                    <label for="query">
+                        Tytuł lub autor:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="query"
+                        name="query"
+                        placeholder="np. Solaris"
+                    >
+                </div>
+
+                <div>
+                    <label for="search-category">
+                        Kategoria:
+                    </label>
+
+                    <select
+                        id="search-category"
+                        name="category"
+                    >
+                        <option value="">
+                            Wszystkie
+                        </option>
+
+                        <option value="fantasy">
+                            Fantasy
+                        </option>
+
+                        <option value="science-fiction">
+                            Science fiction
+                        </option>
+
+                        <option value="crime">
+                            Kryminał
+                        </option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="year-from">
+                        Rok wydania od:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="year-from"
+                        name="year_from"
+                        min="0"
+                    >
+                </div>
+
+                <button type="submit">
+                    Szukaj
+                </button>
+
+            </form>
+        </section>
+
+        <section id="books">
+            <h2>Polecane książki</h2>
+
+            <!-- Lab 05, zadanie 3 — link wyglądający jak przycisk -->
+            <p>
+                <a
+                    class="button-link"
+                    href="add_book.html"
+                >
+                    Dodaj książkę
+                </a>
+            </p>
+
+            <!-- Lab 06 — tabela w kontenerze przewijanym poziomo -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tytuł</th>
+                            <th>Autor</th>
+                            <th>Rok</th>
+                            <th>Dostępna</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Solaris</td>
+                            <td>Stanisław Lem</td>
+                            <td>1961</td>
+                            <td>Tak</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lalka</td>
+                            <td>Bolesław Prus</td>
+                            <td>1890</td>
+                            <td>Nie</td>
+                        </tr>
+
+                        <tr>
+                            <td>Hobbit</td>
+                            <td>J.R.R. Tolkien</td>
+                            <td>1937</td>
+                            <td>Tak</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mały Książę</td>
+                            <td>Antoine de Saint-Exupéry</td>
+                            <td>1943</td>
+                            <td>Tak</td>
+                        </tr>
+
+                        <tr>
+                            <td>1984</td>
+                            <td>George Orwell</td>
+                            <td>1949</td>
+                            <td>Nie</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Lab 06 — karty książek w układzie Flexbox -->
+            <div class="book-list">
+
+                <article class="book-card science-fiction available">
+                    <h3>Solaris</h3>
+
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong>
+                            Stanisław Lem
+                        </p>
+
+                        <p>
+                            <strong>Rok wydania:</strong>
+                            1961
+                        </p>
+                    </div>
+
+                    <p>
+                        Powieść science fiction opowiadająca o próbie
+                        kontaktu człowieka z obcą formą inteligencji.
+                    </p>
+
+                    <a class="button-link" href="#">Szczegóły</a>
+                </article>
+
+                <article class="book-card unavailable">
+                    <h3>Lalka</h3>
+
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong>
+                            Bolesław Prus
+                        </p>
+
+                        <p>
+                            <strong>Rok wydania:</strong>
+                            1890
+                        </p>
+                    </div>
+
+                    <p>
+                        Powieść przedstawiająca historię Stanisława
+                        Wokulskiego oraz społeczeństwo XIX-wiecznej Warszawy.
+                    </p>
+
+                    <a class="button-link" href="#">Szczegóły</a>
+                </article>
+
+                <article class="book-card fantasy available">
+                    <h3>Hobbit</h3>
+
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong>
+                            J.R.R. Tolkien
+                        </p>
+
+                        <p>
+                            <strong>Rok wydania:</strong>
+                            1937
+                        </p>
+                    </div>
+
+                    <p>
+                        Historia wyprawy Bilba Bagginsa, który opuszcza
+                        spokojny dom i wyrusza w niebezpieczną podróż.
+                    </p>
+
+                    <a class="button-link" href="#">Szczegóły</a>
+                </article>
+
+                <article class="book-card available">
+                    <h3>Mały Książę</h3>
+
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong>
+                            Antoine de Saint-Exupéry
+                        </p>
+
+                        <p>
+                            <strong>Rok wydania:</strong>
+                            1943
+                        </p>
+                    </div>
+
+                    <p>
+                        Opowieść o podróży Małego Księcia i jego spotkaniach
+                        z mieszkańcami różnych planet.
+                    </p>
+
+                    <a class="button-link" href="#">Szczegóły</a>
+                </article>
+
+                <article class="book-card unavailable">
+                    <h3>1984</h3>
+
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong>
+                            George Orwell
+                        </p>
+
+                        <p>
+                            <strong>Rok wydania:</strong>
+                            1949
+                        </p>
+                    </div>
+
+                    <p>
+                        Dystopijna powieść przedstawiająca społeczeństwo
+                        kontrolowane przez totalitarne państwo.
+                    </p>
+
+                    <a class="button-link" href="#">Szczegóły</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Lab 06, zadanie 3 — sekcja autorów -->
+        <section id="authors">
+            <h2>Polecani autorzy</h2>
+
+            <div class="author-list">
+                <article class="author-card">
+                    <h3>Stanisław Lem</h3>
+
+                    <p>
+                        Polski pisarz science fiction,
+                        autor m.in. powieści „Solaris”.
+                    </p>
+                </article>
+
+                <article class="author-card">
+                    <h3>J.R.R. Tolkien</h3>
+
+                    <p>
+                        Autor powieści fantasy,
+                        m.in. „Hobbita”.
+                    </p>
+                </article>
+
+                <article class="author-card">
+                    <h3>George Orwell</h3>
+
+                    <p>
+                        Brytyjski pisarz,
+                        autor m.in. powieści „1984”.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="rules">
+            <h2>Jak wypożyczyć książkę?</h2>
+
+            <ol>
+                <li>Znajdź interesującą Cię książkę.</li>
+                <li>Sprawdź, czy jest dostępna.</li>
+                <li>Zaloguj się do aplikacji.</li>
+                <li>Wybierz opcję wypożyczenia.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Planowane funkcje</h2>
+
+            <ul>
+                <li>lista książek,</li>
+                <li>szczegóły książki,</li>
+                <li>autorzy,</li>
+                <li>dodawanie i edycja danych,</li>
+                <li>logowanie użytkowników,</li>
+                <li>wypożyczenia.</li>
+            </ul>
+        </section>
+
+        <!-- Lab 03, zadanie 1 -->
+        <section id="opening-hours">
+            <h2>Godziny otwarcia</h2>
+
+            <ul>
+                <li>Poniedziałek – 8:00–16:00</li>
+                <li>Wtorek – 8:00–16:00</li>
+                <li>Środa – 10:00–18:00</li>
+                <li>Czwartek – 10:00–18:00</li>
+                <li>Piątek – 8:00–14:00</li>
+            </ul>
+        </section>
+
+        <!-- Lab 03, zadanie 2 -->
+        <section id="contact">
+            <h2>Kontakt</h2>
+
+            <p>Biblioteka Akademicka</p>
+            <p>ul. Przykładowa 1</p>
+            <p>10-000 Olsztyn</p>
+
+            <p>
+                <a href="contact.html">Formularz kontaktowy</a>
+                |
+                <a href="register.html">Rejestracja</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Projekt ćwiczeniowy — Projektowanie aplikacji webowych
+        </p>
+    </footer>
+
+</body>
+</html>

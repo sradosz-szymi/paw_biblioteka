@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rejestracja — Biblioteka</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Biblioteka</h1>
+
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="add_book.html">Dodaj książkę</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="register.html">Rejestracja</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Lab 05, zadanie 2 — wyśrodkowany formularz -->
+        <section class="form-section">
+            <h2>Rejestracja</h2>
+
+            <form method="post">
+
+                <div>
+                    <label for="first-name">
+                        Imię:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="first-name"
+                        name="first_name"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="last-name">
+                        Nazwisko:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="last-name"
+                        name="last_name"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="register-email">
+                        E-mail:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="register-email"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="password">
+                        Hasło:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="password-repeat">
+                        Powtórz hasło:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password-repeat"
+                        name="password_repeat"
+                        required
+                    >
+                </div>
+
+                <div class="checkbox-row">
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        Akceptuję regulamin
+                    </label>
+                </div>
+
+                <div>
+                    <button type="submit">
+                        Zarejestruj
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Projekt ćwiczeniowy — Projektowanie aplikacji webowych
+        </p>
+    </footer>
+
+</body>
+</html>

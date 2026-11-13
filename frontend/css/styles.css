@@ -1,0 +1,396 @@
+/* =========================================================
+   Biblioteka — wspólny arkusz stylów (lab 05–06, z rozwiązaniami zadań)
+   ========================================================= */
+
+body {
+    margin: 0;
+
+    background-color: #f5f5f5;
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------- Nagłówek i nawigacja (lab 06 + zadanie 2) ---------- */
+
+header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    background-color: #1f3c5c;
+    color: white;
+
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav a {
+    display: block;
+
+    padding: 10px 12px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: #315c87;
+}
+
+/* ---------- Główna zawartość ---------- */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+section {
+    background-color: white;
+
+    margin: 20px 0;
+    padding: 20px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+/* ---------- Karty książek (lab 05–06) ---------- */
+
+.book-list {
+    display: flex;
+
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    flex: 1 1 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+
+    padding: 15px;
+
+    background-color: #fafafa;
+}
+
+.book-card h3 {
+    margin-top: 0;
+}
+
+.book-card .button-link {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.book-info {
+    color: #555555;
+}
+
+/* Dostępność (lab 05 — modyfikacja, lab 08 — klasa z Django) */
+.available {
+    border-left: 6px solid green;
+}
+
+.unavailable {
+    border-left: 6px solid darkred;
+}
+
+/* Kategorie (lab 05, zadanie 1) — górna krawędź, żeby nie kolidowała z dostępnością */
+.fantasy {
+    border-top: 6px solid #7b4fa3;
+}
+
+.science-fiction {
+    border-top: 6px solid #2f7c9f;
+}
+
+/* ---------- Autorzy (lab 06, zadanie 3) ---------- */
+
+.author-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.author-card {
+    flex: 1 1 220px;
+
+    padding: 15px;
+
+    background-color: #fafafa;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+}
+
+.author-card h3 {
+    margin-top: 0;
+}
+
+/* ---------- Karty zadań — practice.html (lab 05 zad. 4, lab 06 zad. 4) ---------- */
+
+.task-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.task-card {
+    flex: 1 1 250px;
+
+    margin: 0;
+    padding: 15px;
+
+    background-color: white;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+/* ---------- Statystyki na stronie głównej (lab 08, zadanie 4) ---------- */
+
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1 1 150px;
+
+    padding: 15px;
+
+    background-color: #eef3f8;
+
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 2rem;
+    color: #1f3c5c;
+}
+
+/* ---------- Obrazy ---------- */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.library-image {
+    display: block;
+    width: 300px;
+    border-radius: 8px;
+}
+
+/* ---------- Tabela ---------- */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 20px 0;
+}
+
+th,
+td {
+    border: 1px solid #cccccc;
+
+    padding: 10px;
+
+    text-align: left;
+}
+
+th {
+    background-color: #eeeeee;
+}
+
+/* ---------- Formularze ---------- */
+
+form {
+    max-width: 600px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+.search-form {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: end;
+
+    max-width: none;
+}
+
+.search-form div {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.search-form button {
+    flex: 0 0 auto;
+}
+
+/* Lab 05, zadanie 2 — wyśrodkowany formularz rejestracji */
+.form-section {
+    max-width: 650px;
+
+    margin: 30px auto;
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+.checkbox-row label {
+    display: inline;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+
+    padding: 8px;
+
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+}
+
+/* ---------- Przyciski (lab 05, zadanie 3) ---------- */
+
+button,
+.button-link {
+    display: inline-block;
+
+    background-color: #1f3c5c;
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 10px 16px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+button:hover,
+.button-link:hover {
+    background-color: #315c87;
+}
+
+/* ---------- Stopka ---------- */
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #eeeeee;
+}
+
+/* ---------- Responsywność (lab 06) ---------- */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    main {
+        width: 95%;
+    }
+
+}
+
+/* Lab 06, zadanie 5 — własna media query */
+@media (max-width: 600px) {
+
+    section {
+        padding: 12px;
+    }
+
+    .book-list,
+    .author-list,
+    .task-list {
+        flex-direction: column;
+    }
+
+    .book-card,
+    .author-card,
+    .task-card {
+        flex-basis: auto;
+    }
+
+    .library-image {
+        width: 100%;
+    }
+
+}
