@@ -30,7 +30,6 @@ def book_list(request):
             "available": True,
         },
     ]
-
     return render(request, "biblioteka/book_list.html", {"books": books})
 
 
@@ -49,15 +48,3 @@ def contact(request):
 
 def about(request):
     return render(request, "biblioteka/about.html")
-
-def author_list(request):
-    return render(
-        request,
-        "biblioteka/author_list.html",
-    )
-
-def contact(request):
-    return render(
-        request,
-        "biblioteka/contact.html",
-    )
