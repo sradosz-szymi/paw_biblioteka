@@ -60,4 +60,4 @@ Statyczny prototyp z lab 03–06 znajduje się w katalogu `frontend/`
 
 ## Autor
 
-Imię Nazwisko
+Szymon Radosz
